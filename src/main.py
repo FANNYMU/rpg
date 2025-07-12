@@ -1,3 +1,6 @@
+# FIXME: Camera Position not centering correctly on player sprite
+
+
 import arcade
 import math
 from core.particle_manager import ParticleManager
@@ -201,7 +204,6 @@ class GameView(arcade.View):
 
 
 def main():
-    # FIXME: Camera Position not centering correctly on player sprite
     window = arcade.Window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, resizable=True)
 
     game = GameView()
