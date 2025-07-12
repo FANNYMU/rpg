@@ -65,11 +65,14 @@ class Tree:
                     self.chopped = True
                     self.chop_progress = 0.0
                     self.regrow_start_time = time.time()
+                    return True
 
         if self.chopped and self.regrow_start_time is not None:
             if time.time() - self.regrow_start_time >= self.regrow_time:
                 self.chopped = False
                 self.regrow_start_time = None
+        
+        return False
 
     def check_hover(self, x, y):
         left = self.x - self.width / 2
